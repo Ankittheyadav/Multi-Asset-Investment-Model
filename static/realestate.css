@@ -1,0 +1,142 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1; /* Light gray for a balanced background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for elegance */
+    padding: 40px;
+    max-width: 850px;
+    margin: 50px auto;
+}
+
+/* Row styling for vertical split */
+.row {
+    display: flex;
+    justify-content: space-between; /* Space between the two columns */
+}
+
+/* Column styling */
+.content-section, .calculator-section {
+    flex: 1; /* Each column takes equal space */
+    padding: 20px; /* Padding for spacing */
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2e4053; /* Dark slate color for a premium feel */
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #2e4053; /* Consistent underline */
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #34495e; /* Slightly lighter slate */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* List styling */
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    position: relative;
+}
+
+ul li::before {
+    content: '🏠'; /* Real estate icon */
+    color: #2e4053; /* Matches heading color */
+    font-size: 1.2rem;
+    position: absolute;
+    left: -30px;
+    top: 0;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; /* Block display for labels */
+}
+
+input[type="number"], select {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styling */
+button {
+    background-color: #2e4053;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* Center button */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a2c3a;
+}
+
+/* Result styling */
+.result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center; /* Center the result text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, ul li {
+        font-size: 1rem;
+    }
+}

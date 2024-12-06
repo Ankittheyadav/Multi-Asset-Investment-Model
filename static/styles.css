@@ -1,0 +1,201 @@
+/* Ensure the body has some padding from the top */
+.main-section {
+    padding-top: 0px; /* Adjust according to the height of your navbar */
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(168, 171, 176); /* Grey background color */
+    box-shadow: 0 10px 8px -6px rgba(0, 0, 0, 0.3); /* Thin shadow at the bottom */
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #161613;
+
+}
+.navbar-custom .navbar-brand {
+    color: #161613; /* Your desired color for the brand */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar-brand img {
+    margin-left: -100px; /* Adds space between the logo and the text */
+}
+.display-4 {
+    font-size: 3rem;
+}
+
+/* Style the quote section */
+.quote-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px); /* Adjust the height relative to navbar */
+    text-align: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.quote-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: 	#ffbf00; /* Bootstrap primary color */
+    margin-top: -100px;
+    margin-left: 40px;
+}
+
+
+.card {
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: 	#ffbf00;
+    border-color: #313115;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff6600; /* Change to orange on hover */
+    border-color: #ff6600; /* Optional: match border color with background on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+a {
+    color: #007bff;
+}
+
+.navbar {
+    padding: 20px 0; /* Increase the vertical padding */
+    color: #ffbf00;
+}
+
+.navbar-custom {
+    background-color: #ffbf00; /* Change to your desired background color */
+    border-bottom: 2px solid hwb(30 5% 3%); /* Optional border color for a subtle effect */
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #161613 ; /* Change this to your desired color */
+    transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    transform: scale(1.1); /* Slightly increase the size of the link */
+    font-size: 1.05rem; /* Optionally, increase font size slightly */
+}
+
+
+.quote-description {
+    font-size: 1.4rem; /* Font size for the paragraph */
+    color: #ffffff; /* Darker color for the text */
+    padding: 0 20px; /* Optional: Add some padding on the left and right */
+    margin-top: 45px;
+    margin-left: 40px;
+    
+}
+
+.card3d {
+    background-color: rgb(168, 171, 176);
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* 3D shadow */
+    transition: transform 0.3s ease-in-out;
+    height: 200px; /* Ensure square shape */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card3d h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffbf00; /* Bootstrap primary color */
+    font-weight: bold;
+}
+
+.card3d p {
+    font-size: 1rem;
+    color: #ffffff; /* Darker color for description */
+}
+
+.card3d:hover {
+    transform: translateY(-10px); /* Move up on hover for 3D effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced 3D shadow on hover */
+}
+
+.container {
+    background-color: #ffffff; /* White background for the section */
+    padding: 50px 0; /* Add some padding around the section */
+}
+
+
+
+/*AbOUT*/
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    min-height: 80vh; /* Full viewport height */
+    padding: 20px; /* Optional padding */
+    background-color: #f8f9fa; /* Optional background color */
+}
+
+.carousel-inner {
+    text-align: center; /* Center align the text */
+    padding: 20px;
+}
+
+.carousel-card {
+    background-color: #fff; /* White background for the card */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin: 0 auto; /* Center the card */
+    width: 80%; /* Width of the card (can adjust as needed) */
+}
+
+.carousel-item h2 {
+    font-size: 2rem; /* Increase heading size */
+    color: #2e4053; /* Dark slate color */
+    margin-bottom: 10px; /* Decrease this value to move the paragraph closer */
+    margin-top: 1.5rem; /* Adjust to achieve a 2-finger space (about 30px) */
+}
+
+.carousel-item p {
+    font-size: 1.2rem; /* Increased paragraph size */
+    color: #555; /* Dark gray color */
+    line-height: 1.6; /* Improve readability */
+    margin-top: 0; /* Use 0 to pull it higher */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ffbf00; /* Custom color for carousel controls */
+    border-radius: 50%; /* Circular controls */
+}
+
+.about-title {
+    text-align: center; /* Align text to the right */
+    margin-top: -300px; /* Adjust this value as needed */
+}
+
+.about-section h1 {
+    font-size: 2.5rem; /* Size of the title */
+    color: #2e4053; /* Dark slate color */
+    margin: 10px 0 30px; /* Space below the title */
+}
+
+/* Adjustments to center buttons at the bottom */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    bottom: 20px; /* Adjust this value for vertical positioning */
+}

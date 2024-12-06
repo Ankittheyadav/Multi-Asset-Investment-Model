@@ -1,0 +1,104 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Soft light gray background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00796b; /* Dark teal for a stable look */
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #00796b; /* Teal underline */
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #00695c; /* Slightly darker teal */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* List styling */
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    position: relative;
+}
+
+ul li::before {
+    content: '✓'; /* Checkmark icon */
+    color: #00796b; /* Teal checkmark */
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+
+/* Button styling (if added) */
+button {
+    background-color: #00796b;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00695c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, ul li {
+        font-size: 1rem;
+    }
+}

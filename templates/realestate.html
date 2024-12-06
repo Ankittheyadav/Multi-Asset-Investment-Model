@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Investment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='realestate.css') }}">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Real Estate Investment</h1>
+    <div class="row">
+        <div class="col-md-6 content-section">
+            <p>Real estate investment involves purchasing property to earn rental income or sell at a higher value, offering long-term financial security.</p>
+            <h2>Benefits of Real Estate Investment</h2>
+            <ul>
+                <li>Provides a steady rental income</li>
+                <li>Long-term appreciation potential</li>
+                <li>Tangible asset with intrinsic value</li>
+            </ul>
+            <p>Real estate can be a valuable part of an investment portfolio, providing both cash flow and asset appreciation.</p>
+        </div>
+
+        <div class="col-md-6 calculator-section">
+            <h2>Calculate Your Returns</h2>
+            <form id="real-estate-calculator">
+                <label for="investment-amount">Investment Amount (INR):</label>
+                <input type="number" id="investment-amount" required>
+
+                <label for="years">Investment Duration (Years):</label>
+                <input type="number" id="years" required>
+
+                <label for="investment-type">Select Investment Type:</label>
+                <select id="investment-type" required>
+                    <option value="Residential">Residential Real Estate</option>
+                    <option value="Commercial">Commercial Real Estate</option>
+                    <option value="Long-Term">Long-Term Perspective</option>
+                    <option value="Rental Yields">Rental Yields</option>
+                </select>
+
+                <button type="submit" class="calculate-btn">Calculate</button>
+            </form>
+
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('real-estate-calculator').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const investmentAmount = parseFloat(document.getElementById('investment-amount').value);
+        const years = parseFloat(document.getElementById('years').value);
+        const investmentType = document.getElementById('investment-type').value;
+
+        // Sending data to the Flask backend
+        fetch('/calculate_realestate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ amount: investmentAmount, years: years, type: investmentType }),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.error) {
+                document.getElementById('result').innerHTML = `<strong>Error: ${data.error}</strong>`;
+            } else {
+                document.getElementById('result').innerHTML = `
+                    <strong>Total Amount After ${years} Years: ${data.future_value} Rupees</strong><br>
+                    <strong>Total Profit: ${data.profit} Rupees</strong>
+                `;
+            }
+        })
+        .catch(error => {
+            document.getElementById('result').innerHTML = `<strong>Error: ${error.message}</strong>`;
+        });
+    });
+</script>
+
+</body>
+</html>
